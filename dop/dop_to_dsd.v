@@ -6,6 +6,7 @@ module dop_to_dsd#(
     input lrck,
     input data,
 
+    output dclk,
     output ldata,
     output rdata
 );
@@ -23,6 +24,7 @@ dsd_tx#( .DW (DW)) u_dsd_tx (
     .ldata_i(ldata_p),
     .rdata_i(rdata_p),
 
+    .dclk   (dclk),
     .ldata  (ldata),
     .rdata  (rdata)
 );
